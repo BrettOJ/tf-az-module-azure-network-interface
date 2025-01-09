@@ -62,7 +62,6 @@ module "nic_obj" {
   source                         = "git::https://github.com/BrettOJ/tf-az-module-network-interface?ref=main"
   location                       = var.location
   resource_group_name            = module.resource_groups.rg_output.1.name
-  subnet_id                      = module.vnet_subnets_001.snet_output[1].id
   dns_servers                    = var.dns_servers
   edge_zone                      = var.edge_zone
   auxiliary_mode                 = var.auxiliary_mode
